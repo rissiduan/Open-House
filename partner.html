@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner |</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Kanit', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #333;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .dropdown select {
+            padding: 10px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* Partner Section */
+        .partners {
+            padding: 4rem 0;
+        }
+
+        .partner-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .partner {
+            flex: 1;
+            margin: 1rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .partner img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .partner h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .partner:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>พันธมิตร</h1>
+            <p>ร่วมเป็นส่วนหนึ่งกับองค์กรชั้นนำเพื่อพัฒนาการศึกษาของเรา</p>
+        </div>
+    </header>
+
+    <!-- Dropdown for Selecting Partner -->
+    <div class="dropdown">
+        <select id="partner-select" onchange="filterPartners()">
+            <option value="all">แสดงทั้งหมด</option>
+            <option value="org1">ความร่วมมือภายในประเทศ</option>
+            <option value="org2">ความร่วมมือต่างประเทศ</option>
+            
+        </select>
+    </div>
+
+    <!-- Partner Section -->
+    <section class="partners">
+        <div class="container">
+            <div class="partner-list">
+                <a href="https://www.bu.ac.th/th/about/partner/921" class="partner org1">
+                    <img src="https://contents.bu.ac.th/contents/images/mous/994191f8-e50b-4e09-bbb0-5d2f336f8011.webp" alt="Partner 1">
+                    
+                    <h3>Warner Bros. Pictures Thailand</h3>
+                </a>
+                <a href="https://www.bu.ac.th/th/about/partner/380" class="partner org2">
+                    <img src="https://contents.bu.ac.th/contents/images/mous/c293bc56-cc69-492c-a265-9f59e59d7dcf.jpg" alt="Partner 2">
+                    <h3>Coventry University</h3>
+                </a>
+                <a href="https://www.bu.ac.th/th/about/partner/920" class="partner org2">
+                    <img src="https://contents.bu.ac.th/contents/images/mous/51784e96-c023-4769-bb9b-cb82490e4169.webp" alt="Partner 3">
+                    <h3>GDH</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 มหาวิทยาลัย</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterPartners() {
+            var selectBox = document.getElementById("partner-select");
+            var selectedValue = selectBox.value;
+            var partners = document.querySelectorAll(".partner");
+
+            partners.forEach(function(partner) {
+                if (selectedValue === "all" || partner.classList.contains(selectedValue)) {
+                    partner.style.display = "block";
+                } else {
+                    partner.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <style> /*CSS*/
+        body {
+            background-color: #252525;
+            display: grid;
+            place-items: center; /* จัดกลางทั้งแนวนอนและแนวตั้ง */
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+        .text-title{
+
+            font-size: 48px;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+            }
+ 
+
+    .album-image img {
+        width: 33%;
+        height: 33%;
+        border-radius: 8px 8px 0 0;
+        
+
+        
+    }
+    .album-grid {
+        text-align: center;
+    }
+    </style>
+    
+</head>
+
+<body>
+    <h1 class="text-title">Gallery</h1>
+    <div class="gallery-container">
+        
+        <img src="https://contents.bu.ac.th/uploads/galleries/20171204162819_V9TVHdNY5BRBMNyp6rhfcqt59/20171204162843_Z2i6j6pBOzGa5mz_Cj5bDPzKnfSkcvp.jpg" alt="รูปภาพที่ 1">
+        <img src="https://contents.bu.ac.th/uploads/galleries/20171204164601_LomWbQbNu71Zb774l4S9ZsXdB/20171204164658_WCqoJ5jKopvuOAe_zcLWa6m76Uk1otn.jpg" alt="รูปภาพที่ 2">
+        <img src="https://contents.bu.ac.th/uploads/galleries/20180119092639_5JUdgornSFxfgSWrPIzOhfiLH/20180705154733_0GdghJeWSSf3uZi_yGA79SsfRYyT51b.jpg" alt="รูปภาพที่ 3">
+        <img src="https://contents.bu.ac.th/contents/images/gallery/19ad0762-34ce-4d5f-863c-e69061ff4f8d.jpg" alt="รูปภาพที่ 4">
+        </div>
+        <div class="gallery-container">
+        <img src="https://contents.bu.ac.th/contents/images/gallery/f508d886-1538-47ba-9aa2-063ed1f65a5c.jpg" alt="รูปภาพที่ 1">
+        <img src="https://contents.bu.ac.th/contents/images/gallery/bae9da69-2d58-4a77-883f-3466511a1935.webp" alt="รูปภาพที่ 1">
+        <img src="https://contents.bu.ac.th/contents/images/gallery/55e12067-29ba-41be-bb9f-5ea6e0734242.webp" alt="รูปภาพที่ 1">
+        <img src="https://contents.bu.ac.th/contents/images/gallery/e74ade7c-2a7f-411f-b200-1300aa423daf.webp" alt="รูปภาพที่ 1">
+        </div>
+        <div class="text-title"><h2>ดูอัลบั้มอื่น ๆ เพิ่มเติม</h2></div>
+
+
+
+
+
+
+    
+        <div class="album-grid">
+            <article>
+                <h1 class="text-title">รอบรั้วมหาลัย 2024</h1>
+                <a href="https://www.bu.ac.th/th/gallery/48">
+                    <figure class="album-image">
+                    
+                        <img src="https://contents.bu.ac.th/contents/images/gallery/f3eca4f9-1940-474c-bd7e-d017279f1e3b.webp" alt="รอบรั้วมหาลัย 2024">
+                        
+                        
+                    </figure>
+                </a>
+                <figure class="album-image">
+                    <h1 class="text-title">ศูนย์นวัตกรรมและเทคโนโลยี</h1>
+                    <a href="https://www.bu.ac.th/th/gallery/16">
+                             <img src="https://contents.bu.ac.th/uploads/galleries/20171204164601_LomWbQbNu71Zb774l4S9ZsXdB/20171204164658_WCqoJ5jKopvuOAe_zcLWa6m76Uk1otn.jpg" alt="บรรยากาศรอบรั้วมหาวิทยาลัย">
+                             
+                     </a>  
+                 </figure>
+            </article>
+    
+    
+</body>
+</head>
+
+
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำถามที่พบบ่อย (FAQs)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0f0f10;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.bu.ac.th/dist/images/bu_pattern_standard.svg?id=f1e0cd02ad4e9c64650128a784fded12');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+
+        .faq-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        .faq-item h2 {
+            cursor: pointer;
+            margin: 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-item h2:hover {
+            background-color: #e0e0e0;
+        }
+
+        .faq-item .answer {
+            display: none;
+            padding: 10px;
+            background-color: #fafafa;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .faq-item.active .answer {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .faq-container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="faq-container">
+        <h1>คำถามที่พบบ่อย</h1>
+
+        <div class="faq-item">
+            <h2>ช่องทางการสมัครเรียน</h2>
+            <div class="answer">
+                <p>สมัครได้ 2 ช่องทาง คือ:</p>
+                <ol>
+                    <li>สมัครด้วยตนเองที่มหาวิทยาลัย (Main Campus)</li>
+                    <li>สมัครผ่านช่องทางออนไลน์ <a href="https://admissiononline.bu.ac.th/Start" target="_blank">คลิกที่นี่</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h2>เทอม 1/1 กับ 1/2 แตกต่างกันอย่างไร?</h2>
+            <div class="answer">
+                <p>รอบ 1/1 จะเริ่มเรียนในเดือนมิถุนายน และรอบ 1/2 จะเริ่มในเดือนสิงหาคม โดยมีรายละเอียดการชำระเงินและลงทะเบียนที่แตกต่างกัน</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h2>เอกสารที่ใช้ในการสมัครเรียน</h2>
+            <div class="answer">
+                
+                <ol>
+                    <li>สำเนาทะเบียนบ้าน จำนวน  1 ฉบับ </li>
+                    <li> สำเนาบัตรประชาชน  จำนวน 1 ฉบับ </li>
+                    <li> สำเนาหลักฐานการศึกษา จำนวน 1 ฉบับ </li>
+                </ol>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h2>ขั้นตอนการสมัครเรียนออนไลน์</h2>
+            <div class="answer">
+                
+                <ol>
+                    <li>กรอกข้อมูลการสมัครผ่านทางออนไลน์ <a href="https://admissiononline.bu.ac.th/Start" target="_blank">คลิกที่นี่</a></li>
+                    <li>โดยใช้ GPAX 4 หรือ 5 เทอมสามารถตรวจสอบผลการคัดเลือกได้ทันที </li>
+                    <li>เมื่อผ่านการคัดเลือก สามารถชำระค่าเทอม ขึ้นทะเบียนนักศึกษาทางออนไลน์ </li> 
+                
+                    <p>โดยมีช่องทาง ในการชำระเงินได้ ดังนี้</p>
+                    <p>1. ชำระผ่านบัตรเครดิตทุกธนาคาร (ไม่คิดค่าธรรมเนียม)</p>
+                    <p>2. ชำระผ่าน Mobile Application (Scan QR code)</p>
+
+                </ol>
+            </div>
+        </div>
+        
+        
+
+        <!-- Add more FAQs in the same format -->
+
+    </div>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item h2');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
