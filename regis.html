@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="regis.css">
+    <link rel="stylesheet" href="navber.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="https://bulinks.bu.ac.th/storage/2020/03/EIVM16cC27wWkfk-white.png" ></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="speakers.html">Speaker</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+        </ul>
+        <div class="registration">
+            <a href="regis.html">Registration</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>ลงทะเบียน</h1>
+        <form>
+            <label for="name">ชื่อ:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">โทรศัพท์:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="gender">เพศ:</label>
+            <select id="gender" name="gender" required>
+                <option value="">เลือกเพศ</option>
+                <option value="male">ชาย</option>
+                <option value="female">หญิง</option>
+                <option value="other">อื่นๆ</option>
+            </select>
+
+            <input type="submit" value="ลงทะเบียน">
+        </form>
+    </div>
+</body>
+</html>
