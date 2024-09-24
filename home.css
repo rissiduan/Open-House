@@ -50,7 +50,7 @@ body {
     text-align: center; 
     margin: 0 auto; 
     padding: 10px;
-    margin-top: 300px;
+    margin-top: 200px;
     margin-bottom: 200px;
 }
 
@@ -99,16 +99,6 @@ body {
     transform: scale(1.4) rotate(-5deg); 
 }
 
-.fade-in {
-    opacity: 0; 
-    transform: translateY(30px); 
-    transition: opacity 0.6s ease, transform 0.6s ease; 
-}
-
-.fade-in.visible {
-    opacity: 1; 
-    transform: translateY(0); 
-}
 .container-event {
     margin-top: 200px;
     position: relative; 
@@ -159,7 +149,7 @@ body {
 
 .event {
     flex: 1 1 30%; 
-    margin: 10px; 
+    margin: 10px 30px 10px 30px; 
 }
 
 .event img {
